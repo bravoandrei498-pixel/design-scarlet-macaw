@@ -278,8 +278,57 @@ and say so.
   generic output ships.
 
 **What must never vary:** the accessibility floors, the banned defaults, the
-conversion structure, the state coverage. Divergence is earned in expression, not by
-lowering the floor. The silhouette stays; the execution moves with the year.
+conversion structure, the state coverage, and **the learned interaction conventions in
+C11** — divergence is earned in expression, never in how the site behaves. The
+silhouette stays; the execution moves with the year.
+
+---
+
+## C11. Jakob's Law — conventions you don't get to redesign
+
+*"Users spend most of their time on other sites, so they prefer yours to work the same
+way as all the others they already know."* (Nielsen) People arrive with a mental model
+built by thousands of other sites. Meeting it costs nothing and breaking it costs
+conversions.
+
+**This is the counterweight to C10.** Divergence is earned in *expression* — palette,
+type, composition, motion, voice. It is never earned in *interaction*. A site can look
+like nothing else on the internet and still behave exactly like everything else on it;
+that combination is the target. C4 already says don't innovate in the 80% — this rule
+names what the 80% actually contains.
+
+**Non-negotiable affordances (countable — check each before export):**
+- **Logo sits top-left and links to the homepage.** The most universally learned
+  convention on the web. On the homepage it may be inert, never absent.
+- **Every phone number is a `tel:` link. Every email is a `mailto:` link.** Nav,
+  announcement bar, sticky mobile CTA, contact page, footer, per-location cards — all
+  of them. A phone number that can't be tapped on mobile is a lost conversion in every
+  vertical this system serves.
+- **Primary CTA sits at the far right of the header**, visually distinct from nav links.
+- **Close controls sit top-right of the thing they close** (dialogs, mobile nav,
+  banners) and `Esc` also closes it.
+- **Links in body copy look like links** — underline or an equally obvious affordance.
+  Color alone is not a link signal (it also fails WCAG 1.4.1).
+- **Form labels sit above their inputs and persist.** Placeholder-as-label is banned:
+  it disappears on focus, fails autofill, and breaks screen readers.
+- **Errors appear next to the field they concern**, not only summarized at the top.
+- **Enter submits a single-field or short form.** Never trap the key.
+- **Skip-to-content link is first in tab order** on every page.
+- **The back button works.** No history hijacking, no scroll-position traps, no
+  intercepting browser navigation.
+- **Footer carries the site index** — full nav, address, phone, hours, legal links.
+  Users look there when the header fails them; that's learned behavior too.
+- **Standard icons keep their standard meanings.** A magnifier is search, a cart is a
+  cart, a hamburger is a menu. Reskin them freely; never reassign them.
+
+**Where convention and identity collide, convention wins on interaction and identity
+wins on surface.** Restyle the button to the brand's soul; keep it where the thumb
+expects it, keep it obviously a button, and keep its label a verb.
+
+**One deliberate exception is allowed per build** — the Rule 11 Decision 7 signature
+moment, if it genuinely trades a convention for something better. Name it in the
+Compliance Report along with what the user gains. Exactly one; unnamed exceptions are
+failures, not choices.
 
 ---
 
@@ -306,7 +355,9 @@ must not be missed belongs in channel 1.
 
 **3. Mechanical / independent verification (the only real proof).**
 - Greppable checks: banned hexes, raw hex outside `:root`, emoji in headings, font
-  families, target sizes, computed contrast pairs.
+  families, target sizes, computed contrast pairs, and C11's affordances (`tel:` /
+  `mailto:` on every contact string, logo wrapped in a home link, skip link present,
+  no placeholder-as-label).
 - An **independent review** — a fresh session, given this file and the built pages,
   with no memory of having built them.
 
