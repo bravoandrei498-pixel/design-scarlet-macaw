@@ -1,0 +1,174 @@
+/* ============================================================
+   tokens.css — single source of truth for design tokens.
+   Design Scarlet Macaw builder-side reference (sample token file).
+   Imported by BOTH the production site and the Brand Style Guide
+   (Playbook Rule 9 + Rule 7). Specimens render from these, never copies.
+   Sample direction: "Quiet Luxury" (evergreen + muted gold).
+
+   (Design Scarlet Macaw rebuild, Aug 31 2026 — 4-layer token contract,
+   fluid clamp() scales, accessibility tokens. Role names unchanged.)
+
+   ── THE DECLARATION RULE ──────────────────────────────────────
+   A single-file artifact's :root has NO cascade behind it. A missing
+   token doesn't fall back — it silently kills every var() that
+   references it (a missing --motion-base drops the transition
+   entirely, with no error). So: EVERY build declares EVERY token in
+   this file, even the ones keeping their default values. Copy the
+   whole :root, then change values — never trim "unused" tokens.
+
+   ── THE FOUR LAYERS ───────────────────────────────────────────
+   [IDENTITY]  the client must author these — no default is valid
+   [STRUCTURE] the client must author these — scale/rhythm choices
+   [DEFAULT]   sensible cross-client values — override when the
+               direction calls for it, otherwise keep
+   [ALIAS]     slots for brands that lack a richer tier — point
+               them at the base token until the brand needs more
+   ============================================================ */
+
+/* ── Font loading — SELF-HOST by default (Playbook Rule 21c) ──
+   Production: drop subsetted woff2 files in /fonts and self-host with @font-face
+   (faster, more private, no third-party dependency). Pattern:
+
+   @font-face{
+     font-family:'Fraunces'; src:url('fonts/fraunces.woff2') format('woff2');
+     font-weight:300 700; font-display:swap;
+     unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+2000-206F,U+2122,U+2212; }
+   @font-face{
+     font-family:'Source Sans 3'; src:url('fonts/source-sans-3.woff2') format('woff2');
+     font-weight:400 700; font-display:swap;
+     unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+2000-206F,U+2122,U+2212; }
+
+   NOTE: this single-file SAMPLE renders via the Google Fonts <link> in the HTML
+   only as a fallback (no licensed woff2 binaries bundled here). A real project
+   ships the woff2 files and uses the @font-face blocks above instead of the link.
+
+   Font choice is per-client (CRAFT-RULES C2: one expressive display face + one
+   quiet body face, never Inter/Roboto by default, prefer variable fonts). The
+   sample pair here — Fraunces (variable serif) + Source Sans 3 — demonstrates
+   the rule; it is NOT a default to copy across clients. */
+
+:root{
+  /* ============ [IDENTITY] — client must author ============ */
+  --font-disp:'Fraunces', Georgia, serif;
+  --font-body:'Source Sans 3', system-ui, sans-serif;
+
+  /* ---- primary accent: Evergreen (CTA family) ----
+     CRAFT-RULES C3: author scales in OKLCH — vary L at fixed C/H so
+     steps are perceptually even — then paste the hex results here.
+     This scale ≈ oklch(L 0.05 155) with L stepped 0.95 → 0.25. */
+  --ever-50:#ECF2EE; --ever-100:#D6E4DC; --ever-200:#AFC9BB; --ever-300:#7FA28D;
+  --ever-500:#3C5A45; --ever-700:#2A4233; --ever-900:#16291F;
+
+  /* ---- secondary accent: Muted Gold ---- */
+  --gold-50:#F8F2E5; --gold-100:#EFE6D2; --gold-200:#E1D2AE; --gold-300:#D3BD8C;
+  --gold-500:#C2A36B; --gold-700:#9C8049; --gold-900:#5E4D2A;
+
+  /* ---- neutrals ---- */
+  --n-50:#F5F1E8; --n-100:#EEE9DC; --n-200:#E2DBCB; --n-300:#C9C2B2;
+  --n-500:#6B675C; --n-700:#4A4840; --n-900:#242621;
+
+  /* ---- contrast proof (C6) — WCAG 2.x relative-luminance ratios,
+     computed for every text role on the backgrounds it sits on.
+     Recompute this block whenever any value above changes:
+       --ink   #242621 on --canvas #F5F1E8 . 13.56:1   on --surface #FFF . 15.28:1
+       --ink-2 #4A4840 on --canvas ........  8.13:1
+       --muted #6B675C on --canvas ........  5.01:1   on --surface ....  5.65:1
+       --muted #6B675C on --surface-warm #EEE9DC ... 4.66:1  (--meta at 13px passes)
+       #FFFFFF on --cta #3C5A45 ...........  7.66:1   on --cta-hover #2A4233 . 10.91:1
+       #FFFFFF on --anchor #16291F ........ 15.32:1
+       --success #2E5F40 on --success-bg #E7F0E9 ... 6.38:1
+       --error   #A4432D on --error-bg   #F6E6E2 ... 5.07:1
+       --warning #8A5E1F on --warning-bg #F6EDDD ... 4.88:1
+       --focus-ring #2A4233 vs --canvas 9.68:1 / vs --surface 10.91:1
+     All text pairs ≥4.5:1; focus ring ≥3:1. ---- */
+
+  /* ---- roles (name by purpose, never hue — CRAFT-RULES C3) ----
+     Every role below must pass its contrast pairing (C6): --ink on
+     --canvas and on --surface ≥4.5:1; CTA label on --cta ≥4.5:1;
+     verify hover/active shades too, not just resting states. */
+  --canvas:var(--n-50);
+  --surface:#FFFFFF;
+  --ink:var(--n-900);
+  --muted:var(--n-500);
+  --anchor:var(--ever-900);          /* dark anchor: nav / footer / CTA */
+  --cta:var(--ever-500);             /* primary CTA */
+  --cta-hover:var(--ever-700);       /* darkened 10–15% per Rule 12 */
+  --line:rgba(36,38,33,0.12);
+  --line-soft:rgba(36,38,33,0.07);
+
+  /* ============ [STRUCTURE] — client must author ============ */
+
+  /* ---- fluid type scale ----
+     clamp(mobile, fluid, desktop) — one declaration replaces the old
+     desktop block + mobile media query, and every size between 375
+     and 1280px interpolates smoothly (no breakpoint jumps). Endpoints
+     match the previous fixed values, so Rule 13's specs still hold.
+     Formula per step: clamp(min, min + (max−min)·((100vw−375px)/905), max). */
+  --fs-d1:clamp(36px, 26.1px + 2.65vw, 60px);  --lh-d1:1.05; --ls-d1:-0.03em;
+  --fs-d2:clamp(30px, 22.5px + 1.99vw, 48px);  --lh-d2:1.08; --ls-d2:-0.029em;
+  --fs-h2:clamp(28px, 22.2px + 1.55vw, 42px);  --lh-h2:1.12; --ls-h2:-0.024em;
+  --fs-h2b:clamp(24px, 20.7px + 0.88vw, 32px); --lh-h2b:1.15;
+  --fs-h3:22px;  --fs-h4:18px;
+  --fs-lede:clamp(18px, 17.2px + 0.22vw, 20px);
+  --fs-body:16px; --fs-small:13.5px;
+  --fs-eyebrow:13px; --ls-eyebrow:0.08em;      /* caps tracking per CRAFT-RULES C2 */
+  --ls-small:0.015em;                          /* small-text tracking (C2) */
+  --fs-btn:15px; --fs-nav:15px; --fs-field:13px; --fs-link:16px;
+  --lh-body:1.6;
+  --measure:65ch;                              /* long-form column cap (Rule 13) */
+
+  /* ---- section rhythm (fluid between Rule 13's mobile/desktop values) ---- */
+  --section-y:clamp(64px, 40.8px + 6.19vw, 120px);   /* 64 mobile → 120 desktop */
+  --section-y-tight:clamp(48px, 34.7px + 3.54vw, 80px);
+  --container-max:1280px;
+  --gutter:clamp(16px, 9.4px + 1.77vw, 32px);        /* 16 mobile → 32 desktop */
+
+  /* ============ [DEFAULT] — keep unless the direction says otherwise ============ */
+
+  /* ---- semantic (form states / alerts only — never decorative;
+          text shades darkened Aug 31 2026 so each passes ≥4.5:1 on
+          its own -bg — ratios logged in the contrast proof above) ---- */
+  --success:#2E5F40; --success-bg:#E7F0E9;
+  --error:#A4432D;   --error-bg:#F6E6E2;
+  --warning:#8A5E1F; --warning-bg:#F6EDDD;
+
+  /* ---- 8pt spacing scale (Rule 17 — component/inner spacing stays
+          on the fixed grid; only SECTION rhythm above is fluid) ---- */
+  --sp-xs:4px; --sp-s:8px; --sp-m:16px; --sp-l:24px; --sp-xl:32px;
+  --sp-xxl:48px; --sp-h:64px; --sp-h2:80px; --sp-h3:96px; --sp-h4:120px; --sp-h5:160px;
+
+  /* ---- radii (one radius language site-wide — Rule 13) ---- */
+  --r-sm:4px; --r-md:8px; --r-lg:12px; --r-xl:16px; --r-pill:9999px;
+
+  /* ---- shadows — layered, not single-blur (kills the flat-shadow tell).
+          Each level stacks a tight contact shadow + a soft ambient one. ---- */
+  --shadow-sm:0 1px 2px rgba(36,38,33,.05), 0 2px 8px rgba(36,38,33,.05);
+  --shadow-md:0 2px 4px rgba(36,38,33,.05), 0 8px 24px rgba(36,38,33,.08);
+  --shadow-lg:0 4px 8px rgba(36,38,33,.06), 0 18px 44px rgba(36,38,33,.12);
+  --shadow-ring:0 0 0 1px rgba(36,38,33,.08);   /* hairline "ring" elevation */
+  --shadow-cinema:0 30px 60px -18px rgba(0,0,0,.5); /* dark Tier-2+ heroes only (Rule 13) */
+
+  /* ---- motion (timings feed Rule 12's consistency rule; all use
+          gated by prefers-reduced-motion per the Motion Contract) ---- */
+  --motion-fast:150ms;
+  --motion-base:200ms;
+  --motion-slow:300ms;
+  --ease-standard:cubic-bezier(.2,.0,.2,1);   /* the site-wide ease-out */
+  --ease-spring:cubic-bezier(.34,1.56,.64,1); /* Expressive character only */
+  --ease-calm:cubic-bezier(.25,.1,.25,1);     /* Calm character, 600–900ms uses */
+
+  /* ---- accessibility (CRAFT-RULES C6 — structural, not optional) ---- */
+  --focus-ring:2px solid var(--ever-700);     /* ≥3:1 vs canvas AND surface */
+  --focus-offset:2px;
+  --target-min:24px;                          /* WCAG 2.2 §2.5.8 minimum */
+  --target-cta:48px;                          /* mobile CTAs / sticky bar */
+
+  /* ============ [ALIAS] — point at base until the brand needs more ============ */
+  --ink-2:var(--n-700);          /* secondary text tier */
+  --meta:var(--muted);           /* eyebrows / captions */
+  --surface-warm:var(--n-100);   /* alternate section background */
+  --line-strong:var(--line);     /* emphasized divider */
+}
+
+/* Focus visibility — never removed, never color-only (C6) */
+:focus-visible{ outline:var(--focus-ring); outline-offset:var(--focus-offset); }

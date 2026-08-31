@@ -1,0 +1,12 @@
+.DS_Store
+
+# Per-project client kits and any client data — never commit
+clients/
+**/clients/**
+
+# Private/local-only working files (may exist on a maintainer's machine)
+HANDOFF-SUMMARY.md
+_DELETE-THESE/
+notes/
+NEW-COMPUTER-SETUP.md
+_UPLOAD-KIT-TEMPLATE/
