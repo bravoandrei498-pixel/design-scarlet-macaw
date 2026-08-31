@@ -97,7 +97,7 @@ From Section 6 — note any colors or fonts the client is already using. These a
 **E. Primary conversion goal and CTA label**
 From Section 5. This drives every layout decision in the build.
 
-**F. Motion dials** *(restored from v11, Rule 12)*
+**F. Motion dials** *(Rule 12)*
 From Section 3's "Mindset on arrival" → sets the Character dial (Calm / Balanced / Expressive). From Section 9's "Motion Tier & Character" override (if given) and "Motion package" (Essential / Professional / Signature). Default: Tier 2, Character from Mindset on arrival, package Essential unless stated.
 
 **G. Token direction (draft, not final)** — name a palette *direction* tied to the brief; never invent final hex values here (that's Claude Design's job during the Design Canvas, Rule 11 Decision 6).
@@ -155,7 +155,7 @@ overrides (Step 1F) if the client had an opinion. Score = filled / total.
 (list only what's actually missing — omit fields that were provided)
 ```
 
-**I. Dimension resolution** *(v12, Aug 31 2026 — kills the two most common ambiguities in
+**I. Dimension resolution** *(kills the two most common ambiguities in
 natural-language briefs: mood and density. Resolve the brief into eight explicit
 dimensions; every one you fill from a default gets listed in the Design Prompt's
 "Dimensions resolved from defaults" footer so nothing is silently assumed.)*
@@ -259,6 +259,7 @@ Every page, before delivery:
 - [ ] **Schema JSON-LD present** (LocalBusiness + page/industry types per the Dev Handoff schema list)
 - [ ] **Meaningful images are `<img>` elements with alt text** (not CSS backgrounds), dimensions reserved
 - [ ] **Announcement bar (desktop) · hamburger dialog + sticky CTA bar (mobile) · nav dropdowns** wherever sub-pages exist
+- [ ] **Divergence check (CRAFT-RULES C10)** — this build must not be a twin of a generic build in this vertical. Name, in the Compliance Report, the **three specific visual decisions** that came from THIS business (sliders, first-five-seconds emotion, competitive set, or its own story) rather than from the industry playbook's defaults. "Took the playbook's first option" is not a decision.
 - [ ] **Anti-slop P0 scan passes** (uploaded `CRAFT-RULES.md` C1 + Rule 8b): zero banned indigo hexes (`#6366f1`-family), no purple-gradient hero, no emoji icons (footer contact rows are the one sanctioned exception — see Constraints below), no raw hex outside `:root`, no Inter/Roboto unless the brief supplies them
 
 If a page would fail any line: stop, add it, then deliver. The uploaded files tell you
@@ -291,7 +292,7 @@ section is Dev-Handoff-only and is deliberately withheld from the visual build.]
 
 ---
 
-## DESIGN DIMENSIONS — resolved from the brief (v12)
+## DESIGN DIMENSIONS — resolved from the brief
 [Synthesizer fills from Step 1-I. Every value cites its source per the provenance rule.]
 
 - Palette: [direction] *(source)*
@@ -303,7 +304,7 @@ section is Dev-Handoff-only and is deliberately withheld from the visual build.]
 - Density: [compact/balanced/spacious] *(source)*
 - Exclude: [this client's hard bans]
 
-## DO / DON'T — this client, this build (v12)
+## DO / DON'T — this client, this build
 [Synthesizer writes ≥8 of each — CONCRETE and NAMED, never aspirational. Prohibitions
 steer generation more reliably than positive guidance; make each one checkable. Derive
 from: the sliders, the exclude list, the industry default found in grounding (the
@@ -335,7 +336,7 @@ Rule in `00-HOW-THIS-WORKS.md`):
 - [ ] The matching industry playbook — [Synthesizer names the correct file, e.g. `06-HEALTHCARE.md`]
 - [ ] `SECTION-LAYOUT-LIBRARY.md` — section-composition menu; load every build
 - [ ] `OPERATING-LOG.md` — standing cross-project lessons; consult before building
-- [ ] `CRAFT-RULES.md` — universal craft layer: banned defaults, typography/color craft, soul doctrine *(v12)*
+- [ ] `CRAFT-RULES.md` — universal craft layer: banned defaults, typography/color craft, soul doctrine
 
 If any of these seven are missing from the upload, stop and ask for them before
 designing — do not proceed from memory or assumption of their contents.
@@ -429,13 +430,21 @@ No page is shown without a passing Compliance Audit. Walk Rules 1–23 of the Ma
 
 ---
 
-## DIMENSIONS RESOLVED FROM DEFAULTS (v12 — mandatory footer, even when empty)
+## DIMENSIONS RESOLVED FROM DEFAULTS — mandatory footer, even when empty
 [Synthesizer lists EVERY dimension, dial, or value above that was filled from a default
 rather than stated in the brief — one line each, naming the rule that picked it, e.g.:
 - "Density → spacious (default: luxury_quiet mood implies spacious — Step 1-I)"
 - "Display type → expressive serif (default: Elite + Classic slider positions)"
 - "Motion package → Essential (default: none stated — Step 1F)"
 If nothing was defaulted, write "None — every dimension was brief-stated."
+
+Then state the count and the verdict — Claude Design acts on this (CRAFT-RULES C10):
+- **Defaulted: 0–2 → convergence risk LOW.** The brief is driving. Proceed.
+- **Defaulted: 3–5 → MODERATE.** Push the brief-stated dimensions harder so they carry
+  the identity.
+- **Defaulted: 6+ → HIGH.** The playbook is steering this build, not the client. Say so
+  in the Compliance Report and make the 3 directions diverge more than usual.
+
 This transparency is what prevents silent assumptions from propagating into the build.]
 ```
 

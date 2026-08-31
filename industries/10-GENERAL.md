@@ -1,8 +1,30 @@
 # Design Scarlet Macaw — General Industry Playbook
-### Applies to: Any business type not covered by the Healthcare, Legal, Real Estate, or Industrial playbooks.
+### Typical fits: any business not covered by the Healthcare, Legal, Real Estate, or
+### Industrial playbooks. If a business only partly fits one of those, use this file and
+### borrow the specific parts of that playbook that apply.
 ### Examples: Restaurants, fitness studios, beauty salons, spas, automotive, pet services, education, events, photography, coaching, agencies, retail, and any other service or product business.
 
+
+## HOW TO READ THIS PLAYBOOK
+
+**This file narrows the search space. It does not choose the design.**
+
+1. **Client brand assets always win.** If the brief supplies real brand colors, fonts,
+   or a logo, those are the anchor — build around them, never instead of them.
+   Everything below is the fallback for a business with no established brand.
+2. **Constraints bind; recommendations don't.** "Never / Avoid" items are real — they
+   exist because those choices reliably misfire in this vertical. Palette leans, type
+   archetypes, component lists, and section orders are **starting points and menus**:
+   take what this specific business justifies, leave the rest.
+3. **Never ship a whole list.** Every list here is a menu, not a checklist. Taking all
+   of it is precisely how ten different businesses end up with the same website.
+4. **Trends move; this file will lag them.** Where a current, better-executed pattern
+   serves the same goal, use it and note the swap in one line in the Compliance Report.
+   The target is a site that looks made in the year it shipped — not one that matches
+   this document.
+
 ---
+
 
 ## TIER 2 COMPONENTS — DERIVE FROM THE BRIEF
 
@@ -16,7 +38,9 @@ There is no fixed Tier 2 set for the General playbook. The Synthesizer and Claud
 - **Client intake forms?** → Unlock Forms page if needed
 - **Certifications / credentials?** → Unlock Certifications section if the business has relevant qualifications
 
-**Default rule:** if it's in the brief, it gets a section. If it's not in the brief, it doesn't.
+**Default rule:** if it's in the brief, it gets a section. If it's not in the brief, it
+doesn't. Unlocking a component is permission, not an instruction — a thin section is
+worse than an absent one.
 
 ---
 
@@ -40,6 +64,9 @@ above — don't force a business into the nearest archetype if it genuinely does
 ---
 
 ## PALETTE GUIDANCE
+
+*Starting directions, not a prescription. If the client has brand colors, those win.
+The 3 build directions must not all sit in the same corner of this space (Rule 1).*
 
 Without industry-specific palette conventions, derive the palette from the brief's tone, audience, and reference sites.
 
@@ -152,6 +179,12 @@ Adapt dropdown labels to the business type:
 ---
 
 ## HOMEPAGE SECTION ORDER (General Default)
+
+**Recommended starting order — not mandatory.** Reorder, merge, or drop sections when
+this business gives you a reason; state the reason in one line in the Compliance Report.
+Sections for pages or services this client doesn't have are simply omitted, never
+padded with filler.
+
 
 Adapt based on the brief's conversion goal and business type:
 

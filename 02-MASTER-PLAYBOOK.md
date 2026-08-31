@@ -633,7 +633,7 @@ Every page must include a complete layout from navigation to footer. **Never omi
 
 #### Per-page section stacks
 
-**Precedence:** the industry playbook's page order wins; `04-CONVERSION-PLAYBOOK.md` supplies the reasoning; the stacks below are the fallback when neither specifies.
+**Precedence:** the industry playbook's page order is the recommended starting point; `04-CONVERSION-PLAYBOOK.md` supplies the reasoning; the stacks below are the fallback when neither specifies. **None of the three is binding on order.** You may reorder, merge, or drop sections when this specific business justifies it — state the reason in one line in the Compliance Report. What *is* binding: every page still serves its declared conversion goal (Rule 20), and no section ships thin or filler just to match a list.
 
 **Home**
 Nav → Hero → Trust Bar → Value Prop → Services Overview → Testimonials → About Snippet → CTA Banner → Blog Preview → FAQ → Contact Form → Footer

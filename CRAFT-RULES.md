@@ -233,6 +233,56 @@ Forms validate on **blur**, not on every keystroke.
 
 ---
 
+## C10. Cross-project variation — defeating the system fingerprint
+
+C4's screenshot test asks whether this site could be *any business in its vertical*.
+This rule asks the harder question: **could this site be any build produced by this
+system?**
+
+Thousands of people may run this playbook. If each one takes the industry file's first
+listed palette lean, its first type archetype, and its section order verbatim, the
+output converges — and the tell won't be a bad font, it will be that a hundred sites
+share one silhouette. A shared standard should produce a shared *quality floor*, never
+a shared look.
+
+**The test.** Line this build's homepage screenshot up beside another build in the same
+vertical from this system. If the two are twins, the industry file made the decisions —
+not the brief. That's a fail; go back to the divergence inputs below.
+
+**The divergence inputs — resolve these from the brief, never from defaults:**
+1. **Personality sliders + "first five seconds" emotion** (Brief §9) — the primary
+   divergence lever. Two practices wanting *calm/established* and *energetic/modern*
+   should not share a palette, a type pairing, or a hero composition.
+2. **The competitive set** (Rule 1a's Competitive Analysis) — the design must be
+   visually distinguishable from the competitors the brief names. Looking like the
+   local market leader is a loss, not a benchmark.
+3. **The business's own specifics** — its story, premises, demographic, locale, price
+   point. C4's fourth soul slot ("a detail only a real customer would recognize") is
+   where this becomes visible.
+4. **Existing brand assets** — where they exist they dominate, and they are the
+   strongest anti-convergence force available. Use them.
+
+**Sample the menus, don't read them top-down.** Industry palette and typography lists
+are option spaces, not rankings. Taking the first item every time is what produces the
+fingerprint. Pick what this business argues for; if nothing argues, pick deliberately
+and say so.
+
+**The defaults-count signal (mechanical).** Every Design Prompt ends with a
+"Dimensions resolved from defaults" footer. Read it before designing:
+- **0–2 dimensions from defaults** → the brief is driving. Proceed.
+- **3–5** → partial. Push the resolved-from-brief dimensions harder so they carry the
+  identity.
+- **6+** → **convergence risk: high.** The brief isn't steering this build, the
+  playbook is. Say so plainly in the Compliance Report, and make the three directions
+  diverge *more* than usual to compensate — this is the exact condition under which
+  generic output ships.
+
+**What must never vary:** the accessibility floors, the banned defaults, the
+conversion structure, the state coverage. Divergence is earned in expression, not by
+lowering the floor. The silhouette stays; the execution moves with the year.
+
+---
+
 ## How this file is enforced
 - **Rule 8b Pre-Export Gate** carries the P0 slop scan (greppable items from C1).
 - **Rule 8c critique pass** applies C4's screenshot test and scores the build.

@@ -1,11 +1,33 @@
 # Design Scarlet Macaw — Healthcare Industry Playbook
-### Applies to: Chiropractic, Mental Health, Addiction Recovery, Medical, Dental, Wellness, Physical Therapy
+### Typical fits (not exhaustive): Chiropractic, Mental Health, Addiction Recovery, Medical,
+### Dental, Wellness, Physical Therapy — and any other practitioner-led health or care
+### business (veterinary, med spa, optometry, audiology, fertility, home care, nutrition).
+
+
+## HOW TO READ THIS PLAYBOOK
+
+**This file narrows the search space. It does not choose the design.**
+
+1. **Client brand assets always win.** If the brief supplies real brand colors, fonts,
+   or a logo, those are the anchor — build around them, never instead of them.
+   Everything below is the fallback for a business with no established brand.
+2. **Constraints bind; recommendations don't.** "Never / Avoid" items are real — they
+   exist because those choices reliably misfire in this vertical. Palette leans, type
+   archetypes, component lists, and section orders are **starting points and menus**:
+   take what this specific business justifies, leave the rest.
+3. **Never ship a whole list.** Every list here is a menu, not a checklist. Taking all
+   of it is precisely how ten different businesses end up with the same website.
+4. **Trends move; this file will lag them.** Where a current, better-executed pattern
+   serves the same goal, use it and note the swap in one line in the Compliance Report.
+   The target is a site that looks made in the year it shipped — not one that matches
+   this document.
 
 ---
 
-## TIER 2 COMPONENTS UNLOCKED
 
-The following components from the Component Library are active for healthcare builds:
+## TIER 2 COMPONENTS AVAILABLE
+
+These Component Library sections become available for healthcare builds:
 
 - **H10 — Meet the Team / Practitioners** (doctors, therapists, counselors with credentials)
 - **H11 — What We Treat / Conditions Preview** (condition pills on home page)
@@ -18,9 +40,18 @@ The following components from the Component Library are active for healthcare bu
 - **F3 — Patient Forms List** (HIPAA consent, intake forms, auto accident forms)
 - **WT page** — the full "What We Treat / Conditions" page is active
 
+
+**Selection rule:** these are **available**, not required. Include only what the brief
+justifies — services actually offered, pages actually checked, assets that actually
+exist. A typical build uses **3–5** of them. If the brief gives you no reason to
+include one, leave it out: a thin section is worse than an absent one.
+
 ---
 
 ## PALETTE GUIDANCE
+
+*Starting directions, not a prescription. If the client has brand colors, those win.
+The 3 build directions must not all sit in the same corner of this space (Rule 1).*
 
 Healthcare sites must feel safe, trustworthy, and hopeful — never cold or clinical.
 
@@ -93,34 +124,87 @@ Healthcare copy must lead with the patient's pain and end with the transformatio
 
 ---
 
-## HEALTHCARE-SPECIFIC TRUST SIGNALS
+## HEALTHCARE TRUST SIGNALS — pick 4–6
 
-Priority order:
+**This is a menu, not a checklist.** A page carrying twenty trust badges reads as
+insecure, not credible — and it makes every clinic site look identical. Choose the
+**4–6** this practice can actually back with evidence from the brief, lead with the
+strongest, and drop the rest. Anything you cannot substantiate does not go on the page.
 
-1. **Google reviews with real Google G logo** — star rating + review count
-2. **Years in practice** — e.g. "20+ years of experience"
-3. **Patients helped** — e.g. "5,000+ patients cared for"
-4. **Satisfaction / recommendation rate** — e.g. "98% would recommend"
-   *(Use the practice's REAL numbers from the brief. The figures above are format
-   examples only — never ship an invented statistic as if it were verified.)*
-5. **Insurance accepted** — reduces a primary objection immediately
-6. **Named doctors with credentials** — real people, real photos, real training
-7. **Certifications** — Webster Technique, board certifications, specialty training
-8. **Verbatim patient testimonials** — real names, real outcomes
+**Tier 1 — start here (strongest for most practices):**
+1. **Google reviews with the real Google G logo** — star rating + review count
+2. **Named practitioners with credentials** — real people, real photos, real training
+3. **Verbatim patient testimonials** — real names, real outcomes (video converts
+   better than text: a visible face and voice reads as harder to fake)
+4. **Insurance accepted** — removes the single most common objection immediately
+5. **Practice numbers** — years in practice, patients helped, recommendation rate
+   *(Use the practice's REAL figures from the brief. Never ship an invented statistic.)*
+
+**Credibility of the provider:**
+- Board certifications and specialty training (e.g. Webster Technique — use whatever
+  the brief actually names)
+- Continuing education / recent training — shows the practitioner stays current
+- Professional association memberships — name the ones relevant to *this* discipline
+  (chiropractic, dental, therapy, and veterinary bodies all differ; the brief decides)
+- Media mentions — an "As Featured On" strip (local news, podcasts, publications)
+
+**Third-party proof (outside the practice's control — weighs more than self-claims):**
+- Review platforms beyond Google — Healthgrades, Vitals, RateMDs, or the equivalent
+  for the discipline
+- BBB accreditation
+- Local "Best of [City]" awards
+
+**Reduce first-visit friction:**
+- Same-day or walk-in availability
+- Free / low-cost consultation, clearly labeled "no obligation"
+- Hours plus a phone answered by a real person — worth stating explicitly
+- HIPAA-compliant intake / privacy assurance near the form
+
+**Humanize the practice:**
+- Team photos, not only the lead practitioner
+- Real premises photography — actual waiting room, actual equipment, never stock
+- Case-acceptance transparency — "we'll tell you upfront if we're not the right fit"
+  reads as anti-sales, which is exactly why it builds trust
+
+> **Before using any outcome-based claim** — before/after clinical images, success
+> rates, guarantees, "no disciplinary actions," or anything implying a result — see
+> **Compliance Requirements** below. These carry advertising-law exposure and are not
+> free-to-use trust signals.
 
 ---
 
 ## COMMON PATIENT OBJECTIONS (Address in design)
 
+**Pick the 5–7 most relevant to this practice.** Addressing all of them produces a
+bloated FAQ that buries the ones that actually block booking.
+
 | Objection | Where to address |
 |---|---|
 | "Does my insurance cover this?" | Hero area, sidebar, FAQ, near form |
+| "Do you take MY specific plan?" | Insurance section, sidebar, FAQ — name plans where possible |
+| "What does it cost if I'm paying cash?" | Pricing/investment section, FAQ, near booking form |
+| **"Are you even taking new patients right now?"** | Hero, contact page — silence here is a silent bounce driver |
+| **"Is this actually evidence-based?"** | About / Our Approach, FAQ — the skeptic objection generic sites never answer |
 | "Is this safe / will it hurt?" | Services detail, FAQ, first visit section |
-| "Are these doctors qualified?" | About page, credentials section, sidebar |
+| "Are these practitioners qualified?" | About page, credentials section, sidebar |
 | "How many visits will I need?" | FAQ, first visit section |
+| "Will I get locked into a long, expensive package?" | FAQ, services page — transparency here cuts bounce |
+| "Will there be surprise costs (imaging, extra fees)?" | First visit section, FAQ |
 | "Do you treat [my specific condition]?" | What We Treat page, home condition pills |
+| "What if it won't work for my severity/condition?" | Condition pages, testimonials filtered by condition |
+| "Couldn't I just see a regular doctor / PT instead?" | Why Us / differentiation section |
 | "What happens at my first visit?" | About page, FAQ |
 | "Is this covered for children / pregnancy?" | FAQ, pediatric / prenatal service pages |
+| "Do you offer virtual / telehealth?" | Services page, FAQ |
+| "What if I need to cancel or reschedule?" | FAQ, confirmation / reminder emails |
+| "Where do I park / how do I get there?" | Contact page, footer, confirmation email |
+| "Is my health information private?" | Near intake form, footer privacy link |
+
+**Two that punch above their weight:** *"Are you taking new patients?"* — sounds
+trivial, but unanswered it loses visitors who assume they'll hit a wall at booking.
+*"Is this evidence-based?"* — most templates skip it because it feels adversarial, yet
+it's the exact objection that stops analytical visitors converting. Burying it costs
+more than addressing it plainly.
 
 ---
 
@@ -137,6 +221,12 @@ About dropdown: About Us, Meet the Doctors, [Certifications]
 ---
 
 ## HOMEPAGE SECTION ORDER (Healthcare)
+
+**Recommended starting order — not mandatory.** Reorder, merge, or drop sections when
+this business gives you a reason; state the reason in one line in the Compliance Report.
+Sections for pages or services this client doesn't have are simply omitted, never
+padded with filler.
+
 
 1. Announcement bar (insurances accepted + phone)
 2. Hero (condition/outcome-led headline, dual CTA, trust micro-element)
@@ -155,6 +245,21 @@ About dropdown: About Us, Meet the Doctors, [Certifications]
 ---
 
 ## COMPLIANCE REQUIREMENTS
+
+**Health advertising claims — check before shipping.** Outcome and superiority claims
+in healthcare marketing are regulated (FTC in the US, ASA in the UK, and
+profession-specific advertising rules almost everywhere; requirements vary by
+jurisdiction and by discipline). Route each of these to the client for sign-off rather
+than treating it as standard copy:
+- Before/after clinical imagery (X-rays, range-of-motion, physical comparisons) —
+  needs documented patient consent and release language
+- Success rates, cure/outcome claims, or anything implying a guaranteed result
+- "No disciplinary actions," "#1," "best," or comparative superiority claims
+- Testimonials describing outcomes — many jurisdictions require a typicality
+  disclaimer alongside them
+
+If a claim can't be substantiated, cut it. An unverifiable badge is a liability, not a
+trust signal.
 
 - **HIPAA notice** below every patient contact form
 - Privacy Policy linked in footer

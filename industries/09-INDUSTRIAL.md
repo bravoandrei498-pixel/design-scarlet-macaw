@@ -1,9 +1,31 @@
 # Design Scarlet Macaw — Industrial Industry Playbook
-### Applies to: Manufacturing, Construction, Engineering, Trades (Electrical, Plumbing, HVAC), Landscaping
+### Typical fits (not exhaustive): Manufacturing, Construction, Engineering, Trades
+### (Electrical, Plumbing, HVAC), Landscaping — and any other project- or job-site
+### business (roofing, paving, fabrication, logistics, equipment hire, facilities, solar).
+
+
+## HOW TO READ THIS PLAYBOOK
+
+**This file narrows the search space. It does not choose the design.**
+
+1. **Client brand assets always win.** If the brief supplies real brand colors, fonts,
+   or a logo, those are the anchor — build around them, never instead of them.
+   Everything below is the fallback for a business with no established brand.
+2. **Constraints bind; recommendations don't.** "Never / Avoid" items are real — they
+   exist because those choices reliably misfire in this vertical. Palette leans, type
+   archetypes, component lists, and section orders are **starting points and menus**:
+   take what this specific business justifies, leave the rest.
+3. **Never ship a whole list.** Every list here is a menu, not a checklist. Taking all
+   of it is precisely how ten different businesses end up with the same website.
+4. **Trends move; this file will lag them.** Where a current, better-executed pattern
+   serves the same goal, use it and note the swap in one line in the Compliance Report.
+   The target is a site that looks made in the year it shipped — not one that matches
+   this document.
 
 ---
 
-## TIER 2 COMPONENTS UNLOCKED
+
+## TIER 2 COMPONENTS AVAILABLE
 
 - **H10 — Meet the Team / Leadership** (founders, project leads, senior engineers — not always needed)
 - **A5 — Meet the Team on About page** (leadership or key personnel — only if brief includes team)
@@ -21,9 +43,18 @@
 - **Service area map** — geographic coverage is a key decision factor
 - **Fleet / equipment showcase** — for construction, landscaping, equipment-heavy trades
 
+
+**Selection rule:** these are **available**, not required. Include only what the brief
+justifies — services actually offered, pages actually checked, assets that actually
+exist. A typical build uses **3–5** of them. If the brief gives you no reason to
+include one, leave it out: a thin section is worse than an absent one.
+
 ---
 
 ## PALETTE GUIDANCE
+
+*Starting directions, not a prescription. If the client has brand colors, those win.
+The 3 build directions must not all sit in the same corner of this space (Rule 1).*
 
 Industrial sites must project strength, reliability, and competence — not corporate sterility.
 
@@ -136,6 +167,12 @@ Our Work dropdown: Portfolio, Case Studies, (by Project Type if applicable)
 ---
 
 ## HOMEPAGE SECTION ORDER (Industrial)
+
+**Recommended starting order — not mandatory.** Reorder, merge, or drop sections when
+this business gives you a reason; state the reason in one line in the Compliance Report.
+Sections for pages or services this client doesn't have are simply omitted, never
+padded with filler.
+
 
 1. Announcement bar (license number / "licensed, bonded, insured" + phone)
 2. Hero (capability headline, dual CTA, trust micro-element — years in business or projects completed)
