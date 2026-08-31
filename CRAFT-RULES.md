@@ -284,9 +284,33 @@ lowering the floor. The silhouette stays; the execution moves with the year.
 ---
 
 ## How this file is enforced
-- **Rule 8b Pre-Export Gate** carries the P0 slop scan (greppable items from C1).
-- **Rule 8c critique pass** applies C4's screenshot test and scores the build.
-- The **Design Prompt's Do/Don't section** (Synthesizer) translates C1–C3 into
-  client-specific named prohibitions.
-- QA skills can mechanically check: banned hexes, raw hex outside `:root`, emoji
-  in headings, target sizes, contrast pairs.
+
+Enforcement runs on three channels, strongest first. **A rule that lives only in an
+uploaded file is the weakest form of enforcement there is** — field testing showed
+uploaded rules get skipped at generation while prompt-carried rules ship. Anything that
+must not be missed belongs in channel 1.
+
+**1. In the Design Prompt (most reliable — it ships).**
+- The **NON-NEGOTIABLE FLOOR** block: countable minimums, the P0 slop scan, menu
+  discipline (C10's caps), brand precedence, and the divergence check.
+- The **DO / DON'T list**: C1–C3 translated into named, client-specific prohibitions.
+- The **"Dimensions resolved from defaults"** footer, whose count sets C10's
+  convergence-risk verdict.
+
+**2. Self-reported gates inside the build (useful, not proof).**
+- **Rule 8b Pre-Export Gate** — the P0 slop scan plus the Motion and Contrast Manifests.
+- **Rule 8c critique pass** — applies C4's screenshot test and scores the build.
+- The per-page **Compliance Report**, where every deviation must be stated out loud.
+- Treat these as a first-pass filter. A model auditing its own output in the same
+  conversation grades generously; that is why channel 3 exists.
+
+**3. Mechanical / independent verification (the only real proof).**
+- Greppable checks: banned hexes, raw hex outside `:root`, emoji in headings, font
+  families, target sizes, computed contrast pairs.
+- An **independent review** — a fresh session, given this file and the built pages,
+  with no memory of having built them.
+
+**Rules with no mechanical check are judgment calls, and should read like it.** If a
+line here can't be counted, grepped, or independently judged, it belongs in the "aim
+for" register, not the "must" register — overstating an unenforceable rule teaches the
+builder to treat the enforceable ones as soft too.

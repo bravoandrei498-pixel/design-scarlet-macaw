@@ -259,6 +259,8 @@ Every page, before delivery:
 - [ ] **Schema JSON-LD present** (LocalBusiness + page/industry types per the Dev Handoff schema list)
 - [ ] **Meaningful images are `<img>` elements with alt text** (not CSS backgrounds), dimensions reserved
 - [ ] **Announcement bar (desktop) · hamburger dialog + sticky CTA bar (mobile) · nav dropdowns** wherever sub-pages exist
+- [ ] **Menu discipline** — the industry playbook's lists are menus, not checklists. Tier 2 components: include only what the brief justifies (typically 3–5, never all). Trust signals: **4–6 max**, each one the brief can substantiate. Objections addressed: **5–7 max**, chosen for this practice. Shipping a full list is a fail — it is what makes every site in a vertical identical.
+- [ ] **Brand precedence** — where the brief supplies real brand colors, fonts, or a logo, those override every palette/typography lean in the industry playbook. The playbook is the fallback for a business with no brand, never an override of one that has one.
 - [ ] **Divergence check (CRAFT-RULES C10)** — this build must not be a twin of a generic build in this vertical. Name, in the Compliance Report, the **three specific visual decisions** that came from THIS business (sliders, first-five-seconds emotion, competitive set, or its own story) rather than from the industry playbook's defaults. "Took the playbook's first option" is not a decision.
 - [ ] **Anti-slop P0 scan passes** (uploaded `CRAFT-RULES.md` C1 + Rule 8b): zero banned indigo hexes (`#6366f1`-family), no purple-gradient hero, no emoji icons (footer contact rows are the one sanctioned exception — see Constraints below), no raw hex outside `:root`, no Inter/Roboto unless the brief supplies them
 
