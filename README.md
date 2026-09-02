@@ -18,7 +18,7 @@ Claude Design (claude.ai/design) can build beautiful websites — but out of the
 ## Before you start
 
 - A **claude.ai account** with access to **Projects** and **Claude Design** (paid plan)
-- **~20 minutes** for one-time setup ([SETUP.md](SETUP.md))
+- **~20 minutes** for one-time setup ([SETUP.md](SETUP.md)) — including dropping one `CLAUDE.md` into your Claude Design project, which then applies to every build automatically
 - Any OS. (Mac users get a bonus double-click kit script; everyone else uses the Python script or a plain file list.)
 
 ## How it works — 3 steps
@@ -73,6 +73,7 @@ Pasting long files silently truncates them; an early version of this system lost
 | [SECTION-LAYOUT-LIBRARY.md](SECTION-LAYOUT-LIBRARY.md) | Layout vocabulary + page rhythm rules |
 | [OPERATING-LOG.md](OPERATING-LOG.md) | Cross-project lessons the builder must consult |
 | [05-PROMPT-SYNTHESIZER.md](05-PROMPT-SYNTHESIZER.md) | The brief → prompt engine (lives in your Claude Project) |
+| [claude-design-project/CLAUDE.md](claude-design-project/CLAUDE.md) | The persistent build layer — sits at your **Claude Design project root**, applies to every chat there |
 | `industries/` | Per-industry playbooks (healthcare, legal, real estate, industrial, general) |
 
 **Reference & optional:**

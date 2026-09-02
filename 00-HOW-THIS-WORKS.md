@@ -58,6 +58,8 @@ You upload the completed brief into your Claude Project (set up per `SETUP.md`).
 ### Stage 3 — Build
 Upload `[CLIENT-NAME]-DESIGN-PROMPT.md` **together with** the 7 system files — 8 files total, all as attachments — to claude.ai/design.
 
+**One-time per Claude Design project:** put `claude-design-project/CLAUDE.md` at that project's **root**. Claude Design applies a root `CLAUDE.md` to every chat in the project automatically — it carries the floor, the bans, and the conventions, so they hold even if an upload is forgotten. The kit scripts include it in every kit. See `SETUP.md`.
+
 **Easiest way to gather them:** on a Mac, double-click `New Client Kit.command`; on any OS, run `python3 new-client-kit.py`. Either builds `clients/[client-name]-UPLOAD-KIT/` copied fresh from the masters (byte-verified, so it can never be stale). Drop the Design Prompt in and upload that folder's contents. Manual fallback: copy the 7 files listed in `README.md` yourself.
 
 Claude Design:
@@ -140,6 +142,7 @@ Deliver `[CLIENT-NAME]-DEV-HANDOFF.md` to your development team. Every conversio
 | `CRAFT-RULES.md` | Universal, brand-agnostic craft layer — banned AI-default list, typography/color craft, 80/20 soul doctrine, WCAG 2.2 floors | Claude Design (uploaded, never pasted) |
 | `tokens.css` | Builder-side SAMPLE token file showing the Rule 9 shared-token pattern | You — reference only; never uploaded. Claude Design builds each project's token file fresh from Rules 7/9 + the Synthesizer's token direction |
 | `brand-style-guide-template.html` | Reference implementation of the 16-section Live Brand Style Guide (also the specimen to feed Claude Design's native design-system extractor — see `docs/CLAUDE-DESIGN-NATIVE.md`) | You — reference only; never uploaded |
+| `claude-design-project/CLAUDE.md` | Persistent build layer — goes at the **Claude Design project root**, applies to every chat there | Claude Design (project config, not an upload) |
 | `New Client Kit.command` / `new-client-kit.py` | Kit scripts (Mac double-click / any OS) — build `clients/[name]-UPLOAD-KIT/` copied fresh from the masters | You |
 | `industries/06-HEALTHCARE.md` ... `10-GENERAL.md` | Per-industry playbooks | Synthesizer + Claude Design (the one matching file) |
 | `DEV-HANDOFF-TEMPLATE.md` | Base template for the dev handoff spec | Synthesizer populates this |

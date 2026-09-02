@@ -46,6 +46,11 @@ Prompt — do not paste their content into any file):
 Claude Design reads the Design Prompt plus the seven uploaded files and builds. It makes
 all design decisions itself.
 
+**Also standing in the build project:** `claude-design-project/CLAUDE.md` sits at the
+Claude Design project's root and applies to every chat there automatically — the floor,
+the bans, the conventions. It is project configuration, not an upload, so it holds even
+when an attachment is missed. Remind the user it's installed; the kit scripts include it.
+
 **Output 2: `[CLIENT-NAME]-DEV-HANDOFF.md`**
 Goes to developers after the build. Pre-populated from the brief, **including Section
 10**. Based on `DEV-HANDOFF-TEMPLATE.md`.

@@ -55,7 +55,8 @@ When a completed design brief is uploaded or shared in this conversation:
    double-click `New Client Kit.command` at the folder root; on any OS, run
    `python3 new-client-kit.py`. Both create the kit in `clients/`, copied fresh
    from the masters.
-10. Present both files for download, and tell the user to upload the Design Prompt to claude.ai/design **together with** `02-MASTER-PLAYBOOK.md`, `03-COMPONENT-LIBRARY.md`, `04-CONVERSION-PLAYBOOK.md`, the matching industry playbook, `SECTION-LAYOUT-LIBRARY.md`, `OPERATING-LOG.md`, and `CRAFT-RULES.md` — the Design Prompt + 7 system files = **8 uploads total, none pasted**. Do this every time, whether or not step 9's kit folder was assembled.
+10. Remind the user that `CLAUDE.md` (from `claude-design-project/`) belongs at the **root of their Claude Design project** — it applies to every chat there automatically and is the floor that holds even if an upload is missed. The kit scripts include it in every kit.
+11. Present both files for download, and tell the user to upload the Design Prompt to claude.ai/design **together with** `02-MASTER-PLAYBOOK.md`, `03-COMPONENT-LIBRARY.md`, `04-CONVERSION-PLAYBOOK.md`, the matching industry playbook, `SECTION-LAYOUT-LIBRARY.md`, `OPERATING-LOG.md`, and `CRAFT-RULES.md` — the Design Prompt + 7 system files = **8 uploads total, none pasted**. Do this every time, whether or not step 9's kit folder was assembled.
 
 ## Rules
 

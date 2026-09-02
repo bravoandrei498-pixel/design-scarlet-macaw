@@ -74,7 +74,7 @@ def main() -> None:
         die(f"{kit} already exists — refusing to overwrite an existing kit.\n   Delete or rename it first if you really want to rebuild it.")
 
     kit.mkdir(parents=True)
-    to_copy = MASTERS + [ind_file]
+    to_copy = MASTERS + [ind_file, "claude-design-project/CLAUDE.md"]
     for f in to_copy:
         shutil.copy2(ROOT / f, kit / Path(f).name)
 
@@ -92,15 +92,18 @@ byte-identical at creation). The masters were not touched.
 
 TO FINISH THIS KIT:
 1. Drop in {slug}-DESIGN-PROMPT.md (Synthesizer output 1).
-2. Upload ALL 8 .md files in this folder to claude.ai/design as FILE
-   ATTACHMENTS — never paste any of them:
+2. Put CLAUDE.md at the ROOT of your Claude Design project. It applies to
+   every chat in that project automatically — the floor that holds even if
+   an upload is forgotten. (Only the project root is read.)
+3. Upload the other 8 .md files to claude.ai/design as FILE ATTACHMENTS —
+   never paste any of them:
    Design Prompt + 02-MASTER-PLAYBOOK + 03-COMPONENT-LIBRARY +
    04-CONVERSION-PLAYBOOK + {ind_name} +
    SECTION-LAYOUT-LIBRARY + OPERATING-LOG + CRAFT-RULES.
    (This KIT-INFO.txt is a note to you — it is NOT uploaded.)
-3. Keep {slug}-DEV-HANDOFF.md (Synthesizer output 2) next to this folder for
+4. Keep {slug}-DEV-HANDOFF.md (Synthesizer output 2) next to this folder for
    the dev team — it is NOT uploaded to claude.ai/design.
-4. AFTER the build: Claude Design emits an updated OPERATING-LOG.md — copy it
+5. AFTER the build: Claude Design emits an updated OPERATING-LOG.md — copy it
    back over the MASTER OPERATING-LOG.md in the Design Scarlet Macaw folder
    (Rule 22d: the log only carries forward if it actually gets copied back).
 """,
@@ -108,8 +111,8 @@ TO FINISH THIS KIT:
     )
 
     print(f"\n✅ Kit created: {kit}")
-    print("   7 system files copied fresh from the masters + KIT-INFO.txt.")
-    print("   Next: drop in the Design Prompt, then upload the 8 .md files.")
+    print("   7 system files + CLAUDE.md copied fresh from the masters, + KIT-INFO.txt.")
+    print("   Next: drop in the Design Prompt, put CLAUDE.md at your Claude Design\n   project root, then upload the 8 .md files.")
 
 
 if __name__ == "__main__":

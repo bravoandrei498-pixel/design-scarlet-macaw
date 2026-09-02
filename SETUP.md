@@ -64,6 +64,27 @@ automatically.
 
 ---
 
+## Install the persistent build layer (do this once per Claude Design project)
+
+Claude Design reads a file named `CLAUDE.md` at a **project's root** and applies it to
+**every chat in that project**, automatically, with nothing attached. Only the root is
+read — subfolders are ignored.
+
+Put `claude-design-project/CLAUDE.md` from this repo at the root of your Claude Design
+build project. The kit scripts copy it into every kit they create, so it travels with
+each new build.
+
+Why bother, when the playbooks are uploaded anyway: uploaded rules are the weakest
+enforcement channel there is — a build that skips an attachment silently loses the rules
+inside it. `CLAUDE.md` is project configuration rather than an attachment, so it holds
+even when a file is forgotten or a chat starts fresh. It doesn't replace the uploads;
+it's the floor that survives without them.
+
+If you edit the craft rules in the masters, update that file too, or your build projects
+drift from your system.
+
+---
+
 ## Option B — Claude Code / a plain chat with folder access (one-off only)
 
 1. Give the Claude session access to this whole folder.
