@@ -30,7 +30,7 @@
    (faster, more private, no third-party dependency). Pattern:
 
    @font-face{
-     font-family:'Fraunces'; src:url('fonts/fraunces.woff2') format('woff2');
+     font-family:'Newsreader'; src:url('fonts/newsreader.woff2') format('woff2');
      font-weight:300 700; font-display:swap;
      unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+2000-206F,U+2122,U+2212; }
    @font-face{
@@ -43,13 +43,14 @@
    ships the woff2 files and uses the @font-face blocks above instead of the link.
 
    Font choice is per-client (CRAFT-RULES C2: one expressive display face + one
-   quiet body face, never Inter/Roboto by default, prefer variable fonts). The
-   sample pair here — Fraunces (variable serif) + Source Sans 3 — demonstrates
-   the rule; it is NOT a default to copy across clients. */
+   quiet body face, prefer variable fonts; C1 bans Inter, Roboto, Arial, Fraunces
+   and system stacks as DEFAULTS). The sample pair here — Newsreader (variable
+   serif) + Source Sans 3 — demonstrates the rule; it is NOT a default to copy
+   across clients. Pick a face this client argues for, then justify it. */
 
 :root{
   /* ============ [IDENTITY] — client must author ============ */
-  --font-disp:'Fraunces', Georgia, serif;
+  --font-disp:'Newsreader', Georgia, serif;
   --font-body:'Source Sans 3', system-ui, sans-serif;
 
   /* ---- primary accent: Evergreen (CTA family) ----

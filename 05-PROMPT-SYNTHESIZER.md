@@ -90,6 +90,11 @@ returns the page's **text**, not raw HTML/CSS/DOM or image files. So:
   below and paste the results into the Design Prompt with provenance tags. If you
   can't measure them either, mark them `derived` and say so in the prompt rather
   than letting the builder guess.
+- **For anything visual, supply a screenshot.** A fetch conveys words, never
+  layout, spacing, or treatment. If the brief says "design like this site" or
+  references a competitor's look, attach **screenshots** (desktop + mobile) — that
+  is the only channel through which visual reference actually reaches the build.
+  Attach the logo as a file, never as a URL.
 
 **D. Existing brand constraints**
 From Section 6 — note any colors or fonts the client is already using. These are constraints for Claude Design, not design decisions.
@@ -165,7 +170,7 @@ Resolve all eight, in this order — brief-stated values always win over derived
 1. **Palette** — from Step 1G's token direction
 2. **Accent** — the single accent family (and whether a secondary exists)
 3. **Body typography** — quiet, readable face
-4. **Display typography** — the expressive face (never Inter/Roboto by default — CRAFT-RULES C1)
+4. **Display typography** — the expressive face (never Inter, Roboto, Arial, Fraunces or a system stack by default — CRAFT-RULES C1)
 5. **Layout model** — from the industry playbook + Section 9 references
 6. **Mood** — one of: `professional_minimal · warm_human · playful · brutalist · editorial · luxury_quiet`
 7. **Density** — one of: `compact · balanced · spacious` *(resolves to concrete rhythm:
@@ -263,7 +268,7 @@ Every page, before delivery:
 - [ ] **Menu discipline** — the industry playbook's lists are menus, not checklists. Tier 2 components: include only what the brief justifies (typically 3–5, never all). Trust signals: **4–6 max**, each one the brief can substantiate. Objections addressed: **5–7 max**, chosen for this practice. Shipping a full list is a fail — it is what makes every site in a vertical identical.
 - [ ] **Brand precedence** — where the brief supplies real brand colors, fonts, or a logo, those override every palette/typography lean in the industry playbook. The playbook is the fallback for a business with no brand, never an override of one that has one.
 - [ ] **Divergence check (CRAFT-RULES C10)** — this build must not be a twin of a generic build in this vertical. Name, in the Compliance Report, the **three specific visual decisions** that came from THIS business (sliders, first-five-seconds emotion, competitive set, or its own story) rather than from the industry playbook's defaults. "Took the playbook's first option" is not a decision.
-- [ ] **Anti-slop P0 scan passes** (uploaded `CRAFT-RULES.md` C1 + Rule 8b): zero banned indigo hexes (`#6366f1`-family), no purple-gradient hero, no emoji icons (footer contact rows are the one sanctioned exception — see Constraints below), no raw hex outside `:root`, no Inter/Roboto unless the brief supplies them
+- [ ] **Anti-slop P0 scan passes** (uploaded `CRAFT-RULES.md` C1 + Rule 8b): zero banned indigo hexes (`#6366f1`-family), no purple-gradient hero, no emoji icons (footer contact rows are the one sanctioned exception — see Constraints below), no raw hex outside `:root`, no Inter / Roboto / Arial / Fraunces / system-font stack as the chosen face unless the brief supplies it as the client's real brand font
 
 If a page would fail any line: stop, add it, then deliver. The uploaded files tell you
 HOW (Motion Menu, component specs); this block is the WHETHER, and it is not optional.
@@ -366,7 +371,9 @@ Before designing anything:
 1. **Copy — fetch it.** If a live URL is given, fetch the page and use its copy
    verbatim. Do not paraphrase or supplement. If a fetch fails, say so plainly and
    fall back to the copy pasted into this prompt.
-2. **Logo, brand colors, and fonts — do NOT try to fetch these.** URL fetching
+2. **Anything visual arrives as an attachment, not a URL.** Reference screenshots,
+   the logo file, and brand imagery are attached to this prompt or they don't exist.
+   **Logo, brand colors, and fonts — do NOT try to fetch these.** URL fetching
    returns page *text*, not raw HTML/CSS/DOM or image files, so a logo file, a
    measured hex value, and a real font name cannot be recovered from a URL.
    Use only what this prompt supplies:

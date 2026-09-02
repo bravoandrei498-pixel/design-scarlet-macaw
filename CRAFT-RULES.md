@@ -39,8 +39,14 @@ concrete prohibitions are followed far more reliably than aspirations.
    theme colors (Master Playbook Rule 11 icon rule). Single exception: footer
    contact rows may use 📞 ✉️ 📍 at Claude Design's discretion, matched to brand
    register — upscale/high-formality brands get monoline SVG icons instead.
-4. **No Inter or Roboto by default.** Every typeface choice names its reason in
-   the build log. (A client whose existing brand uses them is, again, the exemption.)
+4. **No overused default faces.** Banned as defaults: **Inter, Roboto, Arial,
+   Fraunces, and system-font stacks** (`system-ui`, `-apple-system`, Helvetica).
+   These are what every AI reaches for unprompted, so they read as machine-made
+   regardless of how well the rest is executed. Every typeface choice names its
+   reason in the build log. (A client whose existing brand uses one is the
+   exemption — brand beats ban, per C11's precedence.) A body stack may still list
+   `system-ui` as a *fallback* after a named face; what's banned is shipping it as
+   the choice.
 5. **No "rounded card + colored left-border accent" tiles** — the canonical AI
    dashboard tell. Drop the radius or drop the border; never ship both together.
 6. **No invented metrics** (Master Playbook Rule 3 already bans this — `00+`

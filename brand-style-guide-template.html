@@ -7,8 +7,8 @@
 <!-- Design Scarlet Macaw builder-side reference (sample style-guide template). -->
 <!-- FONTS: production SELF-HOSTS via @font-face/woff2 (Rule 21c — see tokens.css).
      This standalone sample uses the Google Fonts link below only as a fallback so it renders without bundled binaries.
-     Faces match tokens.css (--font-disp: Fraunces / --font-body: Source Sans 3) — specimens render from tokens, never copies. -->
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+     Faces match tokens.css (--font-disp: Newsreader / --font-body: Source Sans 3) — specimens render from tokens, never copies. -->
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600;6..72,700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 <!-- TOKEN TRUTH: import the project's real tokens. Specimens render from these, never copies. -->
 <link rel="stylesheet" href="tokens.css"/>
 <style>
@@ -137,7 +137,7 @@
     <div class="hero">
       <span class="pill">Direction · Quiet Luxury</span>
       <h1>Brand Style Guide</h1>
-      <p>The living system for this site: one brand, two accent colors (evergreen + muted gold), two typefaces (Fraunces + Source Sans 3), built on an 8pt grid. Every component used on the site maps to a variant documented here — and renders from the shared <code>tokens.css</code>, never copied values.</p>
+      <p>The living system for this site: one brand, two accent colors (evergreen + muted gold), two typefaces (Newsreader + Source Sans 3), built on an 8pt grid. Every component used on the site maps to a variant documented here — and renders from the shared <code>tokens.css</code>, never copied values.</p>
     </div>
 
     <section id="s1"><div class="sec-h">01</div><h2 class="sec">Brand &amp; Voice</h2>
@@ -168,7 +168,7 @@
 
     <section id="s4"><div class="sec-h">04</div><h2 class="sec">Typography</h2>
       <div class="fontcards">
-        <div class="fontcard"><div class="aa" style="font-family:var(--font-disp)">Aa</div><div class="fname">Fraunces</div><div class="fmeta">Display / headings · 500–700 · Google Fonts</div></div>
+        <div class="fontcard"><div class="aa" style="font-family:var(--font-disp)">Aa</div><div class="fname">Newsreader</div><div class="fmeta">Display / headings · 500–700 · Google Fonts</div></div>
         <div class="fontcard"><div class="aa" style="font-family:var(--font-body)">Aa</div><div class="fname">Source Sans 3</div><div class="fmeta">Body / UI · 400–700 · Google Fonts</div></div>
       </div>
       <div id="typespecs"></div>
@@ -340,12 +340,12 @@ document.querySelectorAll('.sw').forEach(s=>s.addEventListener('click',()=>{
 
 // typography specs
 const TYPE=[
-  ["Display 1","Hero headline","Fraunces 700 · 60/36px · 1.05 · -1.8px","var(--fs-d1)","700","var(--font-disp)","Refined results, quietly delivered."],
-  ["Display 2","Big statements","Fraunces 700 · 48px · 1.08","var(--fs-d2)","700","var(--font-disp)","Care built around restraint."],
-  ["H2 · Section","Section titles (Title Case)","Fraunces 700 · 42/28px","var(--fs-h2)","700","var(--font-disp)","What We Offer"],
-  ["H2 · Child body","Body headings on child pages","Fraunces 600 · 32/24px","var(--fs-h2b)","600","var(--font-disp)","What's Included"],
-  ["H3","Card titles","Fraunces 600 · 22px","var(--fs-h3)","600","var(--font-disp)","Injectables"],
-  ["H4","Sub-labels","Fraunces 600 · 18px","var(--fs-h4)","600","var(--font-disp)","Our Approach"],
+  ["Display 1","Hero headline","Newsreader 700 · 60/36px · 1.05 · -1.8px","var(--fs-d1)","700","var(--font-disp)","Refined results, quietly delivered."],
+  ["Display 2","Big statements","Newsreader 700 · 48px · 1.08","var(--fs-d2)","700","var(--font-disp)","Care built around restraint."],
+  ["H2 · Section","Section titles (Title Case)","Newsreader 700 · 42/28px","var(--fs-h2)","700","var(--font-disp)","What We Offer"],
+  ["H2 · Child body","Body headings on child pages","Newsreader 600 · 32/24px","var(--fs-h2b)","600","var(--font-disp)","What's Included"],
+  ["H3","Card titles","Newsreader 600 · 22px","var(--fs-h3)","600","var(--font-disp)","Injectables"],
+  ["H4","Sub-labels","Newsreader 600 · 18px","var(--fs-h4)","600","var(--font-disp)","Our Approach"],
   ["Lede","Intro paragraph","Source Sans 3 400 · 20px · 1.6","var(--fs-lede)","400","var(--font-body)","Physician-led aesthetic care that looks like you, only rested."],
   ["Body","Default copy","Source Sans 3 400 · 16px · 1.6","var(--fs-body)","400","var(--font-body)","A clear evaluation and a plan you understand — no upsells, no pressure."],
   ["Small","Captions / meta","Source Sans 3 400 · 13.5px","var(--fs-small)","400","var(--font-body)","Verified customer · Springfield"],
