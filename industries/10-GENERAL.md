@@ -189,7 +189,7 @@ padded with filler.
 Adapt based on the brief's conversion goal and business type:
 
 1. Announcement bar (key offer + phone/booking link — if applicable)
-2. Hero (outcome-led headline, dual CTA, trust micro-element)
+2. Hero (outcome-led headline, primary CTA + one subordinate secondary (never two co-equal buttons — CRAFT-RULES C12), trust micro-element)
 3. Trust/Stats bar (reviews, years, clients — whatever exists)
 4. Brand story / positioning panel
 5. Services or offerings preview

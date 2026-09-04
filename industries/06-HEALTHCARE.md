@@ -229,7 +229,7 @@ padded with filler.
 
 
 1. Announcement bar (insurances accepted + phone)
-2. Hero (condition/outcome-led headline, dual CTA, trust micro-element)
+2. Hero (condition/outcome-led headline, primary CTA + one subordinate secondary (never two co-equal buttons — CRAFT-RULES C12), trust micro-element)
 3. Trust/Stats bar (patients helped, years, rating, recommendation rate)
 4. Brand story / Welcome panel
 5. Services preview grid (photo-forward, 3 cards)

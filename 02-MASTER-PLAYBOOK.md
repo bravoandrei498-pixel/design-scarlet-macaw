@@ -538,6 +538,7 @@ For each item, confirm in the build log: pass, or what was fixed.
 - ☐ **P0** No banned accent hexes anywhere: `#6366f1 #4f46e5 #4338ca #3730a3 #8b5cf6 #7c3aed #a855f7` (or near neighbors used as accent)
 - ☐ **P0** No two-stop purple→blue/cyan gradient on the hero
 - ☐ **P0** No raw hex values outside the `:root` token block — every color goes through a token. *Scope: this grep applies to page markup; the locked Preview Shell chrome (Rule 4's copy-exact values) is exempt.*
+- ☐ **P0** Choice & reach (CRAFT-RULES C12): exactly one primary CTA per view · nav 5–7 top-level · primary CTA is the largest interactive element in its band · mobile primary action in the bottom third · destructive actions not adjacent to the primary. Countable — count them.
 - ☐ **P0** Convention floor (CRAFT-RULES C11): logo links home · every phone number is `tel:` and every email `mailto:` · no placeholder-as-label · body links not color-only · close top-right · skip link present. Greppable — count them, don't assume them.
 - ☐ **P0** No emoji as icons anywhere (headings, feature cards, lists), with ONE exception: the footer contact rows may use 📞 (phone), ✉️ (email), 📍 (address) at Claude Design's discretion, matched to brand register — for upscale/high-formality brands, use monoline SVG icons instead
 - ☐ **P0** No Inter, Roboto, Arial, Fraunces, or system-font stack as a chosen face unless the client's real brand uses it (documented per Rule 23). `system-ui` as a *fallback* after a named face is fine.

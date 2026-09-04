@@ -164,7 +164,7 @@ padded with filler.
 
 
 1. Announcement bar (free consultation + phone)
-2. Hero (client situation headline, dual CTA, trust micro-element — results or rating)
+2. Hero (client situation headline, primary CTA + one subordinate secondary (never two co-equal buttons — CRAFT-RULES C12), trust micro-element — results or rating)
 3. Trust/Stats bar (cases won, years experience, clients helped, recognition)
 4. Brand story / Firm positioning
 5. Practice areas preview grid

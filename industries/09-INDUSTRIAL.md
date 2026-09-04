@@ -175,7 +175,7 @@ padded with filler.
 
 
 1. Announcement bar (license number / "licensed, bonded, insured" + phone)
-2. Hero (capability headline, dual CTA, trust micro-element — years in business or projects completed)
+2. Hero (capability headline, primary CTA + one subordinate secondary (never two co-equal buttons — CRAFT-RULES C12), trust micro-element — years in business or projects completed)
 3. Trust/Stats bar (years in business, projects completed, cities served, certifications)
 4. Brand story / company positioning (founding story, values, what makes them reliable)
 5. Services preview grid (photo of work, not icons)

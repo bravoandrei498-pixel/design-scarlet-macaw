@@ -180,7 +180,7 @@ padded with filler.
 
 
 1. Announcement bar (free valuation / consultation + phone)
-2. Hero (aspirational headline, dual CTA, trust micro-element)
+2. Hero (aspirational headline, primary CTA + one subordinate secondary (never two co-equal buttons — CRAFT-RULES C12), trust micro-element)
 3. Trust/Stats bar (homes sold, sales volume, years, rating)
 4. Brand story / local expertise positioning
 5. Services preview (Buy / Sell / Invest, or service categories for renovation)

@@ -26,6 +26,22 @@ while still feeling trustworthy, and it leads hardest with the booking CTA."]
 
 ---
 
+## Why these choices aren't just taste
+
+*(Optional talking point — useful when a client asks "why does this cost what it costs"
+or pushes a preference that fights the design.)*
+
+Plain English, if it comes up:
+
+- **Good-looking builds trust.** People consistently rate better-looking sites as easier
+  to use — and judge the business behind them as more capable. Looking polished isn't
+  vanity; it changes whether someone calls you.
+- **Familiar beats clever.** Your visitors spend their day on other websites, so yours
+  should work the way those do. We put the personality in how it *looks*, not in making
+  people relearn how a website behaves.
+- **Fewer choices, more action.** Every extra button or field slows a decision down.
+  That's why each page pushes one clear next step rather than five.
+
 ## Direction A — [Name/theme]
 
 **In plain English:** [1-2 sentences — what does this direction communicate to a

@@ -53,6 +53,20 @@ and must still behave like everything else on it.
 **At most one deliberate exception per build**, named in the Compliance Report with what
 the user gains.
 
+## Choice and reach (Hick's + Fitts's)
+
+Every added option costs decision time; every target gets easier as it grows and nears.
+
+- **Exactly one primary CTA per view.** Secondary actions get secondary styling. Two
+  co-equal primaries is a decision the visitor makes instead of converting. (The one
+  exception: the mobile sticky bar's Call + Book pair — two genuinely different paths.)
+- **Top-level nav 5–7 items** — group into dropdowns beyond that.
+- **Forms ask the minimum that allows follow-up.** Anything you could ask later, ask later.
+- **The primary CTA is visibly the largest interactive element in its band.**
+- **On mobile the primary action lives in the bottom third** — that's what the sticky CTA
+  bar is for. Never alone in a top corner. Edge-flush elements can't be overshot; use it.
+- **Destructive actions are smaller and never adjacent to the primary.**
+
 ## Accessibility floor (WCAG 2.2 AA — by construction)
 
 Body text ≥4.5:1, large text and UI ≥3:1, verified per state. Interactive targets

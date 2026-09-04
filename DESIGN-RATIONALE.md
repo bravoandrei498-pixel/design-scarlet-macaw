@@ -47,6 +47,29 @@ notes this summarizes.
 
 ---
 
+## Why craft is a business argument, not a taste argument
+
+*(Standing section — the case for spending on design at all. Keep or trim per audience;
+the specifics below should reference this build.)*
+
+Design decisions in this system are grounded in named, long-studied principles, not
+preference:
+
+- **Aesthetic-usability effect** — people judge better-looking interfaces as easier to
+  use, and are more tolerant of minor usability problems in them. Craft doesn't just
+  make a site look expensive; it measurably changes how capable the business appears and
+  how forgiving visitors are.
+- **Jakob's Law** — visitors spend nearly all their time on other sites, so familiar
+  interaction patterns outperform clever ones. This is why the build is distinctive in
+  its *look* and conventional in its *behavior* (CRAFT-RULES C11).
+- **Hick's Law / Fitts's Law** — every extra choice costs decision time, and every
+  target gets easier as it grows and nears the thumb. This is why there's one primary
+  CTA per view and why the mobile action bar sits where it does (C12).
+
+The practical point for a stakeholder: anyone can generate a website quickly now.
+Knowing *why* one converts and another doesn't is the part that didn't get automated —
+and it's what this system encodes.
+
 ## Conversion strategy
 
 **How the section order serves the primary goal:** [reference the per-page conversion

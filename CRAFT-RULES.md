@@ -338,6 +338,63 @@ failures, not choices.
 
 ---
 
+## C12. Choice and reach — Hick's Law and Fitts's Law
+
+Two laws with numbers in them. Both are countable, so both are gates rather than
+aspirations. C11 covers *where* things go; this covers *how many* and *how reachable*.
+
+### Hick's Law — every added option costs decision time
+
+More choices means slower decisions and more abandonment. This system already applies
+this everywhere (max 2 accent colors, max 2 type families, 4–6 FAQs, 3–5 stat blocks,
+the industry menu caps in C10) — the principle behind those caps is this one, and it
+generalizes to anything not explicitly listed. When in doubt, cut.
+
+- **One primary CTA per view.** Exactly one action styled as primary above the fold and
+  in each conversion band. Secondary actions get secondary styling. Two co-equal primary
+  buttons is a choice the visitor now has to make instead of converting.
+- **Top-level nav: 5–7 items.** Beyond that, group into dropdowns rather than adding
+  another top-level item.
+- **Form fields: ask for the minimum that lets you follow up.** The Conversion
+  Playbook's 3-field quick-quote is the default; every additional field must earn
+  itself. Fields you *could* ask later are fields you ask later.
+- **Service/card grids: 3–6 per row-group.** More than that, categorize.
+- **Never present two things that do the same job.** Two contact forms, two phone
+  numbers, two "get started" paths — pick one, or make the difference obvious.
+
+**The one sanctioned exception:** the mobile sticky bar (Component Library G5) carries
+two actions — Call and Book/Contact. These are genuinely different conversion paths for
+a phone-led business, not the same job twice, and the bar is the thumb-zone surface
+Fitts's Law asks for. Everywhere else, one primary. A hero showing two equally weighted
+buttons is a fail; a hero with a dominant primary and a subordinate secondary is not.
+
+**The test:** count the decisions a visitor must make between landing and converting.
+Every one that isn't load-bearing is friction.
+
+### Fitts's Law — targets get easier as they get bigger and closer
+
+Time to hit a target falls with size and rises with distance. C6 sets the accessibility
+*floor* (≥24×24px, ≥44×44px for CTAs); this is the conversion layer on top of it.
+
+- **Size tracks importance.** The primary CTA is visibly the largest interactive
+  element in its band. If a secondary button is the same size, one of them is wrong.
+- **Put the primary action where the thumb already is.** On mobile that's the bottom
+  third of the screen — which is what the sticky CTA bar exists for. Top corners are the
+  hardest reach on a phone; never put the primary conversion action there alone.
+- **Screen edges and corners are effectively infinite targets** — an element flush to an
+  edge can't be overshot. Edge-anchored sticky bars and full-width mobile buttons are
+  easier to hit than their pixel dimensions suggest. Use that.
+- **Distance from attention counts, not just distance in pixels.** The CTA belongs
+  immediately after the content that motivates it, not parked in a corner.
+- **Inverse Fitts's for destructive actions.** Delete, cancel, unsubscribe and "clear
+  form" should be *harder* to hit — smaller, farther from the primary, never adjacent
+  to it. Easy-to-hit destructive controls are a design defect, not a convenience.
+
+**The test:** on a 375px viewport, can the primary action be hit with one thumb without
+shifting grip? If not, it's in the wrong place regardless of its size.
+
+---
+
 ## How this file is enforced
 
 Enforcement runs on three channels, strongest first. **A rule that lives only in an
@@ -363,7 +420,8 @@ must not be missed belongs in channel 1.
 - Greppable checks: banned hexes, raw hex outside `:root`, emoji in headings, font
   families, target sizes, computed contrast pairs, and C11's affordances (`tel:` /
   `mailto:` on every contact string, logo wrapped in a home link, skip link present,
-  no placeholder-as-label).
+  no placeholder-as-label), and C12's counts (one primary CTA per view, top-level nav
+  items, form-field count, primary CTA larger than secondary).
 - An **independent review** — a fresh session, given this file and the built pages,
   with no memory of having built them.
 
