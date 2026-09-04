@@ -212,6 +212,30 @@ Rule 18 covers the six *interaction* states of components. This covers the five
 
 Forms validate on **blur**, not on every keystroke.
 
+**Accept generously, emit strictly (Postel's Law).** Rejecting valid input on formatting
+grounds is a defect, not validation:
+
+- **Phone fields accept spaces, dashes, parentheses and `+country`.** Card fields accept
+  spaces. Postcodes accept either case. Dates tolerate common formats. Strip and
+  normalise on the system side — never make the visitor guess your preferred shape.
+- **Every input declares its purpose**: `type`, `inputmode` (so mobile shows the right
+  keyboard), and `autocomplete` (`name`, `email`, `tel`, `street-address`, `postal-code`
+  …). This is **WCAG 2.2 §1.3.5 Identify Input Purpose (AA)** and it's also the single
+  cheapest conversion win in any form — autofill turns eight fields into one tap.
+
+**Chunk what has to be read back (Miller's Law, correctly applied).** The usable
+lesson from Miller is chunking, *not* an item-count cap — never cap a menu at seven on
+the strength of it:
+
+- Phone, card and account numbers are formatted into groups, not one unbroken run.
+- Long forms are broken into labelled sections.
+- **Never require carrying a value between screens.** If a later step needs something
+  shown earlier, show it there too — recognition over recall.
+
+**Multi-step flows show progress** (Zeigarnik/goal-gradient): steps completed, steps
+remaining, and never a bar sitting at literal zero on step 1 — visible early progress
+measurably improves completion.
+
 ---
 
 ## C8. Performance is a design decision
@@ -226,6 +250,13 @@ Forms validate on **blur**, not on every keystroke.
   local-service clients it is the conversion lever.
 - Glassmorphism `backdrop-filter` costs real FPS on mid-tier phones — budget it
   like a signature moment, not a default card style.
+
+**Interaction feedback under ~400ms (Doherty threshold).** Below roughly 400ms a person
+stays inside their train of thought; above it, attention breaks and the interface starts
+feeling like something they're waiting on. Every tap, hover, filter and submit
+acknowledges itself within that window — if the real work takes longer, the
+*acknowledgement* still lands immediately (pressed state, skeleton, optimistic UI), and
+C7's loading state covers the rest.
 
 ---
 
@@ -348,7 +379,20 @@ aspirations. C11 covers *where* things go; this covers *how many* and *how reach
 More choices means slower decisions and more abandonment. This system already applies
 this everywhere (max 2 accent colors, max 2 type families, 4–6 FAQs, 3–5 stat blocks,
 the industry menu caps in C10) — the principle behind those caps is this one, and it
-generalizes to anything not explicitly listed. When in doubt, cut.
+generalizes to anything not explicitly listed.
+
+**The cost is logarithmic, not linear, and that changes the fix.** Doubling the options
+doesn't double decision time; what actually costs the user is options that are
+undifferentiated and demand real evaluation. So the move is rarely "delete":
+
+1. **Categorise first.** Grouping turns one large decision into two small ones. Twenty
+   clearly-labelled items in labelled groups beat six vague ones. **A short menu that
+   hides what someone came for is the worse failure** — deletion that removes a real
+   need is not a simplification.
+2. **Give a default.** A sensible pre-selected option is a decision the user doesn't
+   have to make at all. Recommend one where a recommendation is honest.
+3. **Then cut what's genuinely redundant**, and use progressive disclosure for the
+   advanced tail.
 
 - **One primary CTA per view.** Exactly one action styled as primary above the fold and
   in each conversion band. Secondary actions get secondary styling. Two co-equal primary
@@ -386,12 +430,49 @@ Time to hit a target falls with size and rises with distance. C6 sets the access
   easier to hit than their pixel dimensions suggest. Use that.
 - **Distance from attention counts, not just distance in pixels.** The CTA belongs
   immediately after the content that motivates it, not parked in a corner.
+- **Adjacent targets keep ~8px of clear space between them.** Two correct-sized buttons
+  jammed together still produce mis-taps — spacing is part of the target.
 - **Inverse Fitts's for destructive actions.** Delete, cancel, unsubscribe and "clear
   form" should be *harder* to hit — smaller, farther from the primary, never adjacent
   to it. Easy-to-hit destructive controls are a design defect, not a convenience.
 
 **The test:** on a 375px viewport, can the primary action be hit with one thumb without
 shifting grip? If not, it's in the wrong place regardless of its size.
+
+---
+
+## C13. Gestalt — the grouping your visitor's eye does before they think
+
+These are automatic perceptual rules. A layout either cooperates with them or fights
+them, and fighting them reads as "something's off" even when nothing is nameably wrong.
+All of them are checkable.
+
+- **Proximity — the single most checkable rule in this file.** Elements near each other
+  read as related. **The gap inside a group must be visibly tighter than the gap to the
+  next group.** A label 16px from its input and 16px from the next field produces a form
+  that reads wrong no matter how well it's styled. Whitespace is a decision, never
+  leftover space.
+- **Similarity.** Things that look alike are assumed to behave alike. Consistent styling
+  teaches the interface for free — and the trap is the inverse: **anything not
+  interactive must not look like the things that are.** (C11's "links look like links"
+  is this rule, running the other direction.)
+- **Common region.** A shared border or background binds elements into a group and
+  **overrides proximity** — a card boundary groups items sitting further apart than
+  items just outside it. Use it deliberately; don't draw boxes that group the wrong things.
+- **Continuity.** Items on a shared line or curve read as related. This is the real
+  reason alignment matters: a ragged edge breaks the implied line and the group stops
+  reading as a group. Every alignment edge should be intentional.
+- **Figure/ground.** Perception separates foreground from background, and insufficient
+  separation is why text-on-image, low-contrast overlays and glassmorphism fail. Text
+  over imagery must hold its contrast at **every** breakpoint, not just the one you
+  designed on.
+- **Common fate.** Things moving together are read as belonging together — which is what
+  makes a staggered list reveal legible rather than noisy (Rule 12's capped stagger).
+
+**The greyscale test (run it at the Rule 8c critique):** view the page with color
+removed. Do the groupings still read? Is the hierarchy still obvious? If a layout only
+works in color, the grouping is being carried by color alone — which also fails for
+colorblind users and in print.
 
 ---
 
@@ -421,7 +502,8 @@ must not be missed belongs in channel 1.
   families, target sizes, computed contrast pairs, and C11's affordances (`tel:` /
   `mailto:` on every contact string, logo wrapped in a home link, skip link present,
   no placeholder-as-label), and C12's counts (one primary CTA per view, top-level nav
-  items, form-field count, primary CTA larger than secondary).
+  items, form-field count, primary CTA larger than secondary), and C7's input
+  attributes (`type` / `inputmode` / `autocomplete` present on every field).
 - An **independent review** — a fresh session, given this file and the built pages,
   with no memory of having built them.
 

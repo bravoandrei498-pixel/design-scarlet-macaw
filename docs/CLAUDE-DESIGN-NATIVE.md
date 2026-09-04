@@ -108,4 +108,24 @@ at roughly half a Pro plan's week. Habits that cut usage dramatically:
   repeat it in chat rather than re-generating.
 
 ---
+
+## Note for a future design auditor
+
+If this system ever grows an audit mode — pointing the standard at an existing site
+rather than at a new build — **Nielsen's 10 usability heuristics (1994) are the right
+scoring backbone.** They are an evaluation framework, which is why they deliberately do
+*not* live in `CRAFT-RULES.md`: a builder can't act on them prospectively, but a reviewer
+can score against every one of them.
+
+1. Visibility of system status · 2. Match to the real world · 3. User control and freedom
+· 4. Consistency and standards · 5. Error prevention · 6. Recognition over recall ·
+7. Flexibility and efficiency · 8. Aesthetic and minimalist design · 9. Help users
+recognise, diagnose and recover from errors · 10. Help and documentation
+
+Pair them with the countable gates already in this system — C6's contrast and target
+sizes, C7's input attributes, C11's conventions, C12's counts, C13's greyscale test —
+and every finding can state its evidence tier: **measured**, **observed**, or
+**inferred**. A finding that overstates its basis costs more credibility than it buys.
+
+---
 *Design Scarlet Macaw · docs*

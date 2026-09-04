@@ -56,9 +56,13 @@ Design decisions in this system are grounded in named, long-studied principles, 
 preference:
 
 - **Aesthetic-usability effect** — people judge better-looking interfaces as easier to
-  use, and are more tolerant of minor usability problems in them. Craft doesn't just
-  make a site look expensive; it measurably changes how capable the business appears and
-  how forgiving visitors are.
+  use, and are more tolerant of minor usability problems in them (Kurosu & Kashimura,
+  1995; replicated since). Craft doesn't just make a site look expensive; it measurably
+  changes how capable the business appears and how forgiving visitors are.
+  **The sharp edge:** the same effect *masks* usability problems during testing —
+  people forgive an attractive prototype and under-report friction. When reviewing any
+  test or client feedback, weight what people **did** over what they **said**;
+  task completion stays honest while satisfaction scores inflate.
 - **Jakob's Law** — visitors spend nearly all their time on other sites, so familiar
   interaction patterns outperform clever ones. This is why the build is distinctive in
   its *look* and conventional in its *behavior* (CRAFT-RULES C11).

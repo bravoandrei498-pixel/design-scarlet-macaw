@@ -60,12 +60,28 @@ Every added option costs decision time; every target gets easier as it grows and
 - **Exactly one primary CTA per view.** Secondary actions get secondary styling. Two
   co-equal primaries is a decision the visitor makes instead of converting. (The one
   exception: the mobile sticky bar's Call + Book pair — two genuinely different paths.)
-- **Top-level nav 5–7 items** — group into dropdowns beyond that.
+- **Top-level nav 5–7 items** — group into dropdowns beyond that. Where options can't
+  be cut, **group and label them rather than hiding them**, and pre-select a sensible
+  default: a menu that hides what someone came for is the worse failure.
 - **Forms ask the minimum that allows follow-up.** Anything you could ask later, ask later.
 - **The primary CTA is visibly the largest interactive element in its band.**
 - **On mobile the primary action lives in the bottom third** — that's what the sticky CTA
   bar is for. Never alone in a top corner. Edge-flush elements can't be overshot; use it.
 - **Destructive actions are smaller and never adjacent to the primary.**
+
+## Grouping and forms
+
+- **Spacing inside a group is tighter than spacing between groups.** A label must sit
+  closer to its own field than to the next one. Whitespace is a decision.
+- **Nothing non-interactive is styled like the interactive things.** Alignment edges are
+  intentional. Text over imagery holds contrast at every breakpoint.
+- **Greyscale test:** with color removed, the groupings and hierarchy still read.
+- **Every input carries `type`, `inputmode` and `autocomplete`** (WCAG 1.3.5) — autofill
+  is the cheapest conversion win in any form.
+- **Accept generously:** phone and card fields take spaces, dashes and `+country`;
+  normalise on the system side. Rejecting valid input on formatting is a defect.
+- Numbers chunked into groups, long forms sectioned, nothing carried in memory between
+  steps, multi-step flows show progress (never starting at zero).
 
 ## Accessibility floor (WCAG 2.2 AA — by construction)
 
